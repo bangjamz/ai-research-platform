@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Research Platform
 
-## Getting Started
+**Website Belajar Riset Akademik dengan Bantuan AI**
 
-First, run the development server:
+Platform ini dirancang sebagai panduan interaktif untuk memahami dan menerapkan 4 Pilar Riset Berbasis AI. Dibangun dengan teknologi web modern untuk memberikan pengalaman belajar yang premium dan responsif.
 
+## 🌟 Fitur Utama
+-   **4 Pilar Workflow**: Panduan langkah demi langkah dari Akuisisi Data hingga Eksekusi.
+-   **Visualisasi Interaktif**: Diagram alur (Mermaid) dan infografis high-quality dengan fitur Lightbox.
+-   **Responsive Design**: Tampilan optimal di Desktop, Tablet, dan Mobile.
+-   **Unified Codebase**: Satu kode untuk deployment di Root Domain maupun Subfolder.
+
+## 🛠 Teknologi
+-   **Framework**: Next.js 14 (App Router)
+-   **Styling**: Tailwind CSS
+-   **Icons**: Lucide React
+-   **Animations**: Framer Motion
+-   **Diagrams**: Mermaid.js
+
+## 🚀 Deployment Strategy
+
+Project ini menggunakan **Unified Branch Strategy**. Anda tidak perlu lagi berpindah branch untuk deployment yang berbeda. Cukup gunakan perintah build yang sesuai.
+
+### 1. Deploy ke Root Domain (misal: `dojo-it.my.id/`)
+Gunakan perintah build standar:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
 ```
+*Output folder: `out/`*
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Deploy ke Subfolder (misal: `dojo-it.my.id/belajar/ai/`)
+Gunakan perintah build khusus subdirectory:
+```bash
+npm run build:subdir
+```
+*Output folder: `out/`*
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> **Catatan**: Perintah ini otomatis mengatur `basePath` dan path gambar agar sesuai dengan subfolder `/belajar/ai`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 Struktur Project
+-   `app/`: Halaman dan layout utama (Next.js App Router).
+-   `components/`: Komponen UI reusable (Hero, Navbar, ImageModal, dll).
+-   `public/images/`: Aset gambar infografis.
+-   `lib/utils.ts`: Helper functions (termasuk `getAssetPath` untuk dynamic routing).
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📝 Lisensi
+Project ini dibuat untuk tujuan edukasi dan riset.

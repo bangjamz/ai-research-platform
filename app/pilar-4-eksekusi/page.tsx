@@ -3,7 +3,8 @@
 import { WorkflowStep } from "@/components/WorkflowStep";
 import { MermaidDiagram } from "@/components/MermaidDiagram";
 import { ImageModal } from "@/components/ImageModal";
-import { Bot } from "lucide-react";
+import { Zap } from "lucide-react";
+import { getAssetPath } from "@/lib/utils";
 
 const steps = [
     {
@@ -34,7 +35,7 @@ const steps = [
 
 const chart = `
 graph TD
-    A[User] -->|Upload PDF| B(AI Model: Gemini/ChatGPT)
+    A[User] -->|Upload PDF| B(AI Model: Gemini / ChatGPT)
     A -->|Custom Instruction| B
     B -->|Analyze Context| B
     A <-->|Deep Discussion| B
@@ -47,7 +48,7 @@ export default function Pillar4Page() {
         <>
             <div className="relative">
                 <div className="absolute right-4 top-4 z-10 md:right-8 md:top-8">
-                    <ImageModal src="/belajar/ai/images/pillar-4.jpg" alt="Visualisasi Pillar 4" />
+                    <ImageModal src={getAssetPath("/images/pillar-4.jpg")} alt="Visualisasi Pillar 4" />
                 </div>
                 <WorkflowStep
                     number={4}
@@ -55,7 +56,7 @@ export default function Pillar4Page() {
                     description="Filosofi: Berinteraksi dengan data Anda. Ini bukan lagi sekadar bertanya pada AI, tapi berdiskusi dengan 'asisten ahli' yang telah mempelajari data Anda."
                     steps={steps}
                     color="orange"
-                    icon={Bot}
+                    icon={Zap}
                 />
             </div>
             <div className="container mx-auto px-4 md:px-6 pb-20">

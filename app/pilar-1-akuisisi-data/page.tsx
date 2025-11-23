@@ -4,6 +4,7 @@ import { WorkflowStep } from "@/components/WorkflowStep";
 import { MermaidDiagram } from "@/components/MermaidDiagram";
 import { ImageModal } from "@/components/ImageModal";
 import { Search } from "lucide-react";
+import { getAssetPath } from "@/lib/utils";
 
 const steps = [
     {
@@ -48,7 +49,7 @@ export default function Pillar1Page() {
         <>
             <div className="relative">
                 <div className="absolute right-4 top-4 z-10 md:right-8 md:top-8">
-                    <ImageModal src="/belajar/ai/images/pillar-1.png" alt="Visualisasi Pillar 1" />
+                    <ImageModal src={getAssetPath("/images/pillar-1.png")} alt="Visualisasi Pillar 1" />
                 </div>
                 <WorkflowStep
                     number={1}

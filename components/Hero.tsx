@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { getAssetPath } from "@/lib/utils";
 
 export function Hero() {
     return (
@@ -53,7 +54,7 @@ export function Hero() {
 
                     <div className="relative mx-auto max-w-5xl overflow-hidden rounded-2xl border border-slate-800 shadow-2xl">
                         <Image
-                            src="/belajar/ai/images/hero-overview.jpg"
+                            src={getAssetPath("/images/hero-overview.jpg")}
                             alt="Workflow Overview"
                             width={1024}
                             height={576}

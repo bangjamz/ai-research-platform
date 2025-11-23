@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:subdir": "NEXT_PUBLIC_BASE_PATH=/belajar/ai next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint"
   },
   "dependencies": {
     "clsx": "^2.1.1",
